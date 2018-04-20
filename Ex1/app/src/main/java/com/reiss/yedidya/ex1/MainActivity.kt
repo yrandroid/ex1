@@ -73,7 +73,7 @@ class ListAdapter (val messages: ArrayList<Message>): RecyclerView.Adapter<ListA
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         val m = messages[position]
 
-        val formater = SimpleDateFormat("dd/mm/yyyy")
+        val formater = SimpleDateFormat("dd/mm/yyyy hh:MM")
 
         holder?.itemView?.txtDate?.text = formater.format(m.created)
         holder?.itemView?.txtMessage?.text = m.message
